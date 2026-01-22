@@ -4,7 +4,7 @@ export default function Home() {
       <div className="max-w-3xl text-center">
         {/* HERO SECTION */}
         <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent mb-6">
-          Hi, I'm [Your Name]
+          Hi, I'm Abigayle Dyvette D. CaLamba
         </h1>
         
         <p className="text-xl text-slate-400 mb-10 leading-relaxed">
@@ -20,6 +20,9 @@ export default function Home() {
           <button className="px-8 py-3 border border-slate-700 hover:bg-slate-900 rounded-full font-semibold transition-all">
             Contact Me
           </button>
+          <button className="px-8 py3 border border-slate-700 hover;bg-slate-900 rounded full font-semibold transistion-all">
+            Currently Learning
+            </button>
         </div>
       </div>
     </main>
