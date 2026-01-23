@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <div className="bg-slate-950 text-slate-200 selection:bg-emerald-500/30">
@@ -18,7 +20,16 @@ export default function Home() {
 
       {/* HERO SECTION */}
       <section id="home" className="min-h-screen flex flex-col items-center justify-center text-center px-6">
-        <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
+        <div className="relative w-48 h-48 md:w-64 md:h-64 shrink-0">
+    <div className="absolute inset-0 rounded-full border-2 border-emerald-500 translate-x-3 translate-y-3"></div>
+    <Image 
+      src="/profile.png" // Change this to your filename in the public folder
+      alt="Profile Picture"
+      fill
+      className="rounded-full object-cover grayscale hover:grayscale-0 transition duration-500 border-2 border-slate-800 bg-slate-800"
+    />
+  </div>
+  <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
           Hello, I'm <span className="text-emerald-400">Abigayle Dyvette D. Calamba.</span>
         </h1>
         <p className="text-xl md:text-2xl text-slate-400 max-w-2xl">
