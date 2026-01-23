@@ -10,6 +10,7 @@ export default function Home() {
             <a href="#home" className="hover:text-emerald-400 transition">Home</a>
             <a href="#about" className="hover:text-emerald-400 transition">About</a>
             <a href="#projects" className="hover:text-emerald-400 transition">Projects</a>
+            <a href="#growth" className="hover:text-emerald-400 transition">Growth</a>
             <a href="#contact" className="hover:text-emerald-400 transition">Contact</a>
           </div>
         </div>
@@ -18,7 +19,7 @@ export default function Home() {
       {/* HERO SECTION */}
       <section id="home" className="min-h-screen flex flex-col items-center justify-center text-center px-6">
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
-          Hello, I'm <span className="text-emerald-400">[Your Name].</span>
+          Hello, I'm <span className="text-emerald-400">Abigayle Dyvette D. Calamba.</span>
         </h1>
         <p className="text-xl md:text-2xl text-slate-400 max-w-2xl">
           I'm a full stack web developer passionate about building clean and functional applications.
@@ -83,6 +84,43 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* GROWTH SECTION (In-Progress Learning) */}
+<section id="growth" className="py-24 bg-slate-950 border-t border-slate-900">
+  <div className="max-w-5xl mx-auto px-6">
+    <div className="flex items-center gap-4 mb-12">
+      <h2 className="text-3xl font-bold text-white border-b-4 border-emerald-500 w-fit">GROWTH</h2>
+      <span className="bg-emerald-500/10 text-emerald-400 text-xs py-1 px-3 rounded-full border border-emerald-500/20 uppercase tracking-widest font-bold">
+        Currently Learning
+      </span>
+    </div>
+
+    <div className="grid md:grid-cols-2 gap-8">
+      {/* Learning Project 1 */}
+      <div className="p-8 rounded-xl bg-slate-900/50 border border-emerald-500/10 hover:border-emerald-500/40 transition-all group">
+        <h3 className="text-xl font-bold text-emerald-400 mb-3 uppercase tracking-tight">AI Chatbot Integration</h3>
+        <p className="text-slate-400 leading-relaxed mb-4">
+          I am currently exploring the Vercel AI SDK and OpenAI API to build an intelligent assistant that can answer questions about my documentation.
+        </p>
+        <div className="flex gap-2">
+          <span className="text-[10px] bg-slate-800 px-2 py-1 rounded text-slate-300">#AI</span>
+          <span className="text-[10px] bg-slate-800 px-2 py-1 rounded text-slate-300">#Python</span>
+        </div>
+      </div>
+
+      {/* Learning Project 2 */}
+      <div className="p-8 rounded-xl bg-slate-900/50 border border-emerald-500/10 hover:border-emerald-500/40 transition-all">
+        <h3 className="text-xl font-bold text-emerald-400 mb-3 uppercase tracking-tight">Advanced TypeScript</h3>
+        <p className="text-slate-400 leading-relaxed mb-4">
+          Deep-diving into Generics and Utility Types to make my web applications more robust and type-safe.
+        </p>
+        <div className="flex gap-2">
+          <span className="text-[10px] bg-slate-800 px-2 py-1 rounded text-slate-300">#TS</span>
+          <span className="text-[10px] bg-slate-800 px-2 py-1 rounded text-slate-300">#SoftwareArchitecture</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* FOOTER */}
       <footer className="py-12 text-center border-t border-slate-900 text-slate-500 text-sm">
