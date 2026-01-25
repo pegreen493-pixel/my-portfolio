@@ -3,24 +3,26 @@
 /* 1. ANIMATION MATH (Must be at the top) */
 @keyframes drift {
   0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(40px, 40px) scale(1.1); }
+  25% { transform: translate(150px, 100px) scale(1.2); } /* Moves further right/down */
+  50% { transform: translate(-100px, 200px) scale(0.9); } /* Moves far left/down */
+  75% { transform: translate(-150px, -100px) scale(1.1); } /* Moves far left/up */
   100% { transform: translate(0, 0) scale(1); }
 }
 
 .animate-drift {
-  animation: drift 8s ease-in-out infinite;
+  animation: drift 5s ease-in-out infinite;
 }
 
 .delay-2000 {
-  animation-delay: 2s;
+  animation-delay: 1.5s;
 }
 
 /* 2. THE GRID STYLE */
 .bg-grid {
   background-size: 4rem 4rem;
   background-image: 
-    linear-gradient(to right, rgba(30, 41, 59, 0.5) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(30, 41, 59, 0.5) 1px, transparent 1px);
+    linear-gradient(to right, rgba(51, 65, 85, 0.8) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(51, 65, 85, 0.8) 1px, transparent 1px);
 }
 
 /* 3. THEME SETTINGS */
