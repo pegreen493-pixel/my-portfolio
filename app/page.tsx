@@ -28,7 +28,7 @@ export default function Home() {
       src="/profile.png" // Change this to your filename in the public folder
       alt="Profile Picture"
       fill
-      className="rounded-full object-cover grayscale hover:grayscale-0 transition duration-500 border-2 border-slate-800 bg-slate-800"
+      className="rounded-full object-cover transition duration-500 border-2 border-slate-800 bg-slate-800 transform hover:scale-110"
     />
   </div>
   <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
