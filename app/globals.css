@@ -32,15 +32,15 @@
 
 @keyframes float-fast {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-25PX); }
+  50% { transform: translateY(-25pX); }
+}
 
   .animate-float-slow {
-    animation: float-slow 4s ease-in-out infinte;
+    animation: float-slow 4s ease-in-out infinite;
   }
   .animate-float-fast {
     animation: float-fast 3s ease-in-out infinite;
   }
-}
 /* 3. THEME SETTINGS */
 @theme {
   --color-background: #020617;
