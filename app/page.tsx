@@ -78,7 +78,7 @@ export default function Home() {
             </div>
             <div className="p-6">
               <h3 className="text-xl font-bold text-white mb-2">Project Name</h3>
-              <p className="text-slate-400 mb-4 text-sm">Built with Next.js, Tailwind, and Supabase.</p>
+              <p className="text-slate-400 mb-4 text-sm">Built with Next.js, Tailwind, and Suparbase.</p>
               <button className="text-emerald-400 font-bold text-sm hover:underline">LEARN MORE →</button>
             </div>
           </div>
