@@ -34,7 +34,7 @@ export default function SkillsConstellation() {
                         </div>
                         
                         <div className='relative z-10 flex flex-col items-center pointer-events-none'>
-                            <img src ={skill.icon} alt={skill.name} className='w-11 h-11 mb-2 drop-shadow-[0_0_8px_rgba(16,185,129,0.3)]' />
+                            <img src ={skill.icon} alt={skill.name} className='w-11 h-11 mb-0.5 drop-shadow-[0_0_8px_rgba(16,185,129,0.3)]' />
                             <span className='text-[10px] font-bold uppercase tracking-tigther text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
                                 {skill.name}
                             </span>
