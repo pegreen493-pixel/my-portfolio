@@ -1,17 +1,10 @@
 export default function Background() {
   return (
-    <div className="fixed inset-0 -z-9999 overflow-hidden bg-[#020617]">
-      {/* 1. THE GRID */}
-      <div 
-        className="absolute inset-0 opacity-[0.15]" 
-        style={{
-          backgroundImage: `linear-gradient(to right, #1e293b 1px, transparent 1px), 
-                            linear-gradient(to bottom, #1e293b 1px, transparent 1px)`,
-          backgroundSize: '4rem 4rem'
-        }}
-      />
+    <div className="fixed inset-0 -z-10 overflow-hidden bg-[#020617]">
+      {/* 1. THE GRID (Now using the CSS class) */}
+      <div className="absolute inset-0 bg-grid opacity-40" />
       
-      {/* 2. THE GLOW ORBS (Direct Styles) */}
+      {/* 2. THE MOVING ORBS */}
       <div 
         className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full animate-drift"
         style={{
