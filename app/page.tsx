@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Background from "./Background";
 
 export default function Home() {
   return (
     <div className="bg-slate-950 text-slate-200 selection:bg-emerald-500/30">
-      
+      <Background />
       {/* NAVIGATION */}
       <nav className="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
         <div className="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -30,7 +31,7 @@ export default function Home() {
     />
   </div>
   <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
-          Hello, I'm <span className="text-emerald-400">Abigayle Dyvette D. Calamba.</span>
+          Hello, I'm <span className="text-emerald-400">Abigayle.</span>
         </h1>
         <p className="text-xl md:text-2xl text-slate-400 max-w-2xl">
           I'm a full stack web developer passionate about building clean and functional applications.
