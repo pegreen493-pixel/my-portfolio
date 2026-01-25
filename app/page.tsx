@@ -45,7 +45,7 @@ export default function Home() {
       {/* ABOUT SECTION */}
       <section id="about" className="py-24 bg-slate-900">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-white mb-12 border-b-4 border-emerald-500 w-fit">ABOUT</h2>
+          <h2 className="text-3xl font-bold text-white mb-8 border-b-4 border-emerald-500 w-fit">ABOUT</h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="text-lg text-slate-400 leading-relaxed">
               <p className="mb-6">
