@@ -37,7 +37,7 @@ export default function SkillsConstellation() {
                             >
                               
                                 <div 
-                                    className="absolute inset-0 bg-cyan-900/30 backdrop-blur-md border-[3px] border-cyan-400 group-hover:border-emerald-400 group-hover:bg-emerald-600/50 transition-all duration-300
+                                    className="absolute inset-0 bg-cyan-900/30 backdrop-blur-md group-hover:bg-emerald-600/50 transition-all duration-300
                                                filter drop-shadow-[0_0_15px_rgba(16,185,129,0.7)]"
                                     style={{ 
                                         clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
