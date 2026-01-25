@@ -31,7 +31,7 @@ html {
 }
 
 .animate-drift {
-  animation: drift 10s infinite alternate ease-in-out;
+  animation: drift 1s infinite alternate ease-in-out;
 }
 
 .delay-2000 {
