@@ -25,7 +25,7 @@ export default function SkillsConstellation() {
                     {skills.map((skill, index) => (
                         <div
                         key={skill.name}
-                        className={`relative w-24 h-28 flex items-center justify-center transition-all duration-500 hover:scale-110 group
+                        className={`relative w-24 h-26 flex items-center justify-center transition-all duration-500 hover:scale-110 group
                             ${index % 2 === 0 ? 'animate-float-slow' : 'animate-float-fast'}`}
                         >
                         <div className='absolute inset-0 bg-cyan-800/50 backdrop-blur-sm border-2 border-emerald-400/50 group-hover:border-emerald-500 group-hover:bg-emerald-500/20 transition-all duration-300 shadow-xl'
