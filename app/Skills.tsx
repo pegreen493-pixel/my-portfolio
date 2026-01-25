@@ -21,13 +21,18 @@ export default function SkillsConstellation() {
             <div className="max-w-5xl mx-auto px-6 text-center">
                 {/*<h2 className="text-3xl font-bold text-white mb-16 border-b-4 border-emerald-500 w-fit mx-auto uppercase tracking-widest"></h2> */}
                 
-                <div className="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
-                    {skills.map((skill, index) => (
+                <div className="flex flex-wrap justify-center gap-x-4 gap-y-[-20px] max-w-xl mx-auto pb-10">
+                    {skills.map((skill, index) => {
+                        const isEvenRow = Math.floor(index / 3) % 2 === 1;
+
+                        return (
                         <div
                         key={skill.name}
                         className={`relative w-24 h-26 flex items-center justify-center transition-all duration-500 hover:scale-110 group
-                            ${index % 2 === 0 ? 'animate-float-slow' : 'animate-float-fast'}`}
+                            ${index % 2 === 0 ? 'animate-float-slow' : 'animate-float-fast'}
+                            ${isEvenRow ? 'translate-x-12' : ''} -mb-6`}
                         >
+                        
                         <div className='absolute inset-0 bg-gray-400/50 backdrop-blur-sm border-2 border-emerald-400/50 group-hover:border-emerald-500 group-hover:bg-emerald-500/20 transition-all duration-300 shadow-xl'
                             style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}>
     
@@ -40,7 +45,8 @@ export default function SkillsConstellation() {
                             </span>
                         </div>
                         </div>
-                    ))}
+                    );
+                    })}
                 </div>
             </div>
         </section>
