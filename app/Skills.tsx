@@ -28,13 +28,13 @@ export default function SkillsConstellation() {
                         className={`relative w-24 h-28 flex items-center justify-center transition-all duration-500 hover:scale-110 group
                             ${index % 2 === 0 ? 'animate-float-slow' : 'animate-float-fast'}`}
                         >
-                        <div className='absolute inset-0 bg-slate-900/80 backdrop-blur-sm border border-emerald-500/30 group-hover:border-emerald-500 group-hover:bg-emerald-500/20 transition-all duration-300 shadow-xl'
+                        <div className='absolute inset-0 bg-slate-zinc/50 backdrop-blur-sm border border-emerald-1000/30 group-hover:border-emerald-500 group-hover:bg-emerald-500/20 transition-all duration-300 shadow-xl'
                             style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}>
     
                         </div>
                         
                         <div className='relative z-10 flex flex-col items-center pointer-events-none'>
-                            <img src ={skill.icon} alt={skill.name} className='w-10 h-10 mb-2 drop-shadow-[0_0_8px_rgba(16,185,129,0.3)]' />
+                            <img src ={skill.icon} alt={skill.name} className='w-11 h-11 mb-2 drop-shadow-[0_0_8px_rgba(16,185,129,0.3)]' />
                             <span className='text-[10px] font-bold uppercase tracking-tigther text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
                                 {skill.name}
                             </span>
