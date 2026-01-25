@@ -21,34 +21,40 @@ export default function SkillsConstellation() {
             <div className="max-w-5xl mx-auto px-6 text-center">
                 {/*<h2 className="text-3xl font-bold text-white mb-16 border-b-4 border-emerald-500 w-fit mx-auto uppercase tracking-widest"></h2> */}
                 
-                <div className="flex flex-wrap justify-center gap-x-4 gap-y-[-20px] max-w-xl mx-auto pb-10">
+                <div className="relative inline-grid grid-cols-3 sm:grid-cols-3 gap-x-2 gap-y-[-10px] items-center justify-items-center">
                     {skills.map((skill, index) => {
-                        const isEvenRow = Math.floor(index / 3) % 2 === 1;
+                        // Logic to stagger every second "visual" row
+                        // We push items 4, 5, 9, 10 slightly to the right
+                        const isStaggered = [3, 4, 5, 9, 10].includes(index);
 
                         return (
-                        <div
-                        key={skill.name}
-                        className={`relative w-24 h-26 flex items-center justify-center transition-all duration-500 hover:scale-110 group
-                            ${index % 2 === 0 ? 'animate-float-slow' : 'animate-float-fast'}
-                            ${isEvenRow ? 'translate-x-12' : ''} -mb-6`}
-                        >
-                        
-                        <div className='absolute inset-0 bg-gray-400/50 backdrop-blur-sm border-2 border-emerald-400/50 group-hover:border-emerald-500 group-hover:bg-emerald-500/20 transition-all duration-300 shadow-xl'
-                            style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}>
-    
-                        </div>
-                        
-                        <div className='relative z-10 flex flex-col items-center pointer-events-none'>
-                            <img src ={skill.icon} alt={skill.name} className='w-11 h-11 mb-0.5 drop-shadow-[0_0_8px_rgba(16,185,129,0.3)]' />
-                            <span className='text-[10px] font-bold uppercase tracking-tigther text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-                                {skill.name}
-                            </span>
-                        </div>
-                        </div>
-                    );
+                            <div
+                                key={skill.name}
+                                className={`relative w-24 h-28 flex items-center justify-center transition-all duration-500 hover:scale-110 group
+                                    ${index % 2 === 0 ? 'animate-float-slow' : 'animate-float-fast'}
+                                    ${isStaggered ? 'ml-24' : ''} 
+                                    -mb-8 /* Vertical bunching */
+                                `}
+                            >
+                                {/* HIGH CONTRAST BORDER & LIGHT BLUE CORE */}
+                                <div 
+                                    className="absolute inset-0 bg-cyan-900/30 backdrop-blur-md border-[3px] border-cyan-400 group-hover:border-cyan-200 group-hover:bg-cyan-700/50 transition-all duration-300
+                                               filter drop-shadow-[0_0_15px_rgba(34,211,238,0.7)]"
+                                    style={{ 
+                                        clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
+                                    }} 
+                                />
+
+                                <div className='relative z-10 flex flex-col items-center pointer-events-none'>
+                                    <img src={skill.icon} alt={skill.name} className='w-11 h-11 mb-2 drop-shadow-[0_0_5px_rgba(255,255,255,0.3)]' />
+                                    <span className='text-[10px] font-black uppercase tracking-widest text-cyan-200 opacity-0 group-hover:opacity-100 transition-all duration-300'>
+                                        {skill.name}
+                                    </span>
+                                </div>
+                            </div>
+                        );
                     })}
                 </div>
             </div>
         </section>
     );
-}
