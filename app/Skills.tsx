@@ -25,21 +25,20 @@ export default function SkillsConstellation() {
                     {skills.map((skill, index) => {
                         // Logic to stagger every second "visual" row
                         // We push items 4, 5, 9, 10 slightly to the right
-                        const isStaggered = [3, 4, 5, 9, 10].includes(index);
+                        const isStaggeredRow = Math.floor(index / 3) % 2 === 1;
 
                         return (
                             <div
                                 key={skill.name}
-                                className={`relative w-24 h-28 flex items-center justify-center transition-all duration-500 hover:scale-110 group
-                                    ${index % 2 === 0 ? 'animate-float-slow' : 'animate-float-fast'}
-                                    ${isStaggered ? 'ml-24' : ''} 
-                                    -mb-8 /* Vertical bunching */
+                                className={`relative w-24 h-28 flex items-center justify-center transition-all duration-500 hover:scale-110 group animate-unison
+                                    ${isStaggeredRow ? 'translate-x-12' : ''} 
+                                    -mb-8
                                 `}
                             >
-                                {/* HIGH CONTRAST BORDER & LIGHT BLUE CORE */}
+                              
                                 <div 
-                                    className="absolute inset-0 bg-cyan-900/30 backdrop-blur-md border-[3px] border-cyan-400 group-hover:border-cyan-200 group-hover:bg-cyan-700/50 transition-all duration-300
-                                               filter drop-shadow-[0_0_15px_rgba(34,211,238,0.7)]"
+                                    className="absolute inset-0 bg-cyan-900/30 backdrop-blur-md border-[3px] border-cyan-400 group-hover:border-emerald-400 group-hover:bg-emerald-600/50 transition-all duration-300
+                                               filter drop-shadow-[0_0_15px_rgba(16,185,129,0.7)]"
                                     style={{ 
                                         clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
                                     }} 
@@ -47,7 +46,7 @@ export default function SkillsConstellation() {
 
                                 <div className='relative z-10 flex flex-col items-center pointer-events-none'>
                                     <img src={skill.icon} alt={skill.name} className='w-11 h-11 mb-2 drop-shadow-[0_0_5px_rgba(255,255,255,0.3)]' />
-                                    <span className='text-[10px] font-black uppercase tracking-widest text-cyan-200 opacity-0 group-hover:opacity-100 transition-all duration-300'>
+                                    <span className='text-[10px] font-black uppercase tracking-widest text-emerald-400 opacity-0 group-hover:opacity-100 transition-all duration-300'>
                                         {skill.name}
                                     </span>
                                 </div>
