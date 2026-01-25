@@ -3,7 +3,7 @@ export default function Background() {
     <div className="fixed inset-0 -z-10 overflow-hidden bg-slate-950">
       {/* The Grid Layer */}
       <div 
-        className="absolute inset-0 opacity-20" 
+        className="absolute inset-0 opacity-100" 
         style={{
           backgroundImage: `linear-gradient(to right, #0f172a 1px, transparent 1px), 
                             linear-gradient(to bottom, #0f172a 1px, transparent 1px)`,

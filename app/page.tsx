@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Background from "./components/Background";
+import Background from "./Background";
 
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
       <Background />
 
       {/* 2. NAVIGATION BAR */}
-      <nav className="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+      <nav className="relative min-h-screen text-slate-200 selection:bg-emerald-500/30 flex flex-col">
         <div className="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
           <span className="text-emerald-400 font-bold text-xl tracking-tighter">PEGREEN</span>
           <div className="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
