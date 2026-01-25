@@ -1,6 +1,6 @@
 export default function Background() {
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden bg-[#020617]">
+    <div className="fixed inset-0 -z-9999 overflow-hidden bg-[#020617]">
       {/* 1. THE GRID */}
       <div 
         className="absolute inset-0 opacity-[0.15]" 
