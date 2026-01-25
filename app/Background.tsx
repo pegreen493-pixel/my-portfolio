@@ -1,14 +1,31 @@
 export default function Background() {
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden bg-slate-950">
-      {/* Grid */}
-      <div className="absolute inset-0 opacity-100" 
-           style={{ backgroundImage: `linear-gradient(to right, #0f172a 1px, transparent 1px), linear-gradient(to bottom, #0f172a 1px, transparent 1px)`, backgroundSize: '4rem 4rem' }} />
+    <div className="fixed inset-0 -z-10 overflow-hidden bg-[#020617]">
+      {/* 1. THE GRID */}
+      <div 
+        className="absolute inset-0 opacity-[0.15]" 
+        style={{
+          backgroundImage: `linear-gradient(to right, #1e293b 1px, transparent 1px), 
+                            linear-gradient(to bottom, #1e293b 1px, transparent 1px)`,
+          backgroundSize: '4rem 4rem'
+        }}
+      />
       
-      {/* THE MOVING ORBS - Check the class names here */}
-      <div className="absolute top-0 -left-4 w-96 h-96 bg-emerald-500 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-drift" />
-      <div className="absolute top-0 -right-4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-drift delay-2000" />
-      <div className="absolute -bottom-8 left-20 w-96 h-96 bg-teal-500 rounded-full mix-blend-multiply filter blur-[128px] opacity-20 animate-drift delay-4000" />
+      {/* 2. THE GLOW ORBS (Direct Styles) */}
+      <div 
+        className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full animate-drift"
+        style={{
+          background: 'radial-gradient(circle, rgba(16, 185, 129, 0.4) 0%, transparent 70%)',
+          filter: 'blur(80px)',
+        }}
+      />
+      <div 
+        className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] rounded-full animate-drift delay-2000"
+        style={{
+          background: 'radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%)',
+          filter: 'blur(100px)',
+        }}
+      />
     </div>
   );
 }
