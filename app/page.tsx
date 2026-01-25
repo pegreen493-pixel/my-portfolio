@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Background from "./Background";
+import SkillsConstellation from "./Skills";
 
 export default function Home() {
   return (
@@ -56,13 +57,7 @@ export default function Home() {
             </div>
             
             {/* SKILLS GRID */}
-            <div className="grid grid-cols-3 gap-4">
-              {['React', 'Next.js', 'TypeScript', 'Tailwind', 'Node.js', 'Git', 'HTML', 'CSS', 'PostgreSQL'].map((skill) => (
-                <div key={skill} className="bg-slate-800 p-4 text-center rounded border border-slate-700 hover:border-emerald-500/50 transition">
-                  <span className="text-xs font-bold text-emerald-400 uppercase">{skill}</span>
-                </div>
-              ))}
-            </div>
+            <SkillsConstellation/>
           </div>
         </div>
       </section>
