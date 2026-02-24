@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Background from "./Background";
 import SkillsConstellation from "./Skills";
+import Contact from './Contact'; // 1. Check the import path
 
 export default function Home() {
   return (
@@ -128,7 +129,8 @@ export default function Home() {
     </div>
   </div>
 </section>
-
+<div className="absolute inset-0 rounded-full border-2 border-emerald-500 translate-x-3 translate-y-3"></div>
+ <Contact />
       {/* FOOTER */}
       <footer className="py-12 text-center border-t border-slate-900 text-slate-500 text-sm">
         <p>© 2026 [YOUR NAME]. ALL RIGHTS RESERVED.</p>
