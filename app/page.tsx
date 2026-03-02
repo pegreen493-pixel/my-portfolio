@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Background from "./Background";
 import SkillsConstellation from "./Skills";
+import Contact from './Contact';
 
 export default function Home() {
   return (
@@ -133,6 +134,8 @@ export default function Home() {
       <footer className="py-12 text-center border-t border-slate-900 text-slate-500 text-sm">
         <p>© 2026 [YOUR NAME]. ALL RIGHTS RESERVED.</p>
       </footer>
+
+      <Contact />
     </div>
   );
 }
