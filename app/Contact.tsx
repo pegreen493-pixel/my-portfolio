@@ -13,10 +13,10 @@ export default function Contact() {
     setStatus('sending');
 
     emailjs.sendForm(
-      'YOUR_SERVICE_ID',   // From EmailJS Dashboard
-      'YOUR_TEMPLATE_ID',  // From EmailJS Dashboard
+      'service_v4zdc9f',   // From EmailJS Dashboard
+      'template_2euqd2u',  // From EmailJS Dashboard
       form.current,
-      'YOUR_PUBLIC_KEY'    // From EmailJS Dashboard
+      'DbybYGcbDNG9JLLo8',   // From EmailJS Dashboard
     )
     .then(() => {
         setStatus('success');
