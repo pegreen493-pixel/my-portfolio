@@ -13,17 +13,19 @@ export default function Contact() {
     setStatus('sending');
 
     emailjs.sendForm(
-      'service_v4zdc9f',   // From EmailJS Dashboard
-      'template_2euqd2u',  // From EmailJS Dashboard
+      'service_v4zdc9f',   
+      'template_2euqd2u',  
       form.current,
-      'DbybYGcbDNG9JLLo8',   // From EmailJS Dashboard
+      'DbybYGcbDNG9JLLo8',   
     )
     .then(() => {
         setStatus('success');
         form.current?.reset();
         setTimeout(() => setStatus('idle'), 5000); 
+    })
+    .catch((err) => {
         setStatus('error');
-        console.error(error.text);
+        console.error(err);
     });
   };
 
@@ -31,10 +33,10 @@ export default function Contact() {
     <section id="contact" className="py-20 px-4 relative z-10">
       <div className="max-w-xl mx-auto bg-[#0a0c14] border border-white/10 rounded-2xl p-8 shadow-2xl backdrop-blur-sm">
         <h2 className="text-4xl font-bold mb-2 text-center text-white tracking-tight">
-          Get In <span className="text-blue-500">Touch</span>
+        Send a <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00f5a0] to-[#00d98f]">Message</span>
         </h2>
         <p className="text-gray-400 text-center mb-8 text-sm">
-          Have a project in mind? Let's build something great.
+          What's your message?
         </p>
         
         <form ref={form} onSubmit={sendEmail} className="space-y-5">
@@ -47,7 +49,7 @@ export default function Contact() {
                 name="from_email" 
                 placeholder="name@example.com"
                 required 
-                className="w-full p-4 rounded-xl bg-[#161b22] border border-white/10 text-white placeholder:text-gray-500 outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 transition-all shadow-inner"
+                className="w-full p-4 rounded-xl bg-[#161b22] border border-white/10 text-white placeholder:text-gray-500 outline-none focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 transition-all shadow-inner"
             />
           </div>
           
@@ -59,19 +61,19 @@ export default function Contact() {
                 name="message" 
                 placeholder="What's on your mind?"
                 required 
-                className="w-full p-4 h-40 rounded-xl bg-[#161b22] border border-white/10 text-white placeholder:text-gray-500 outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 transition-all resize-none shadow-inner"
+                className="w-full p-4 rounded-xl bg-[#161b22] border border-white/10 text-white placeholder:text-gray-500 outline-none focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 transition-all shadow-inner"
             />
           </div>
 
           <button   
             type="submit" 
             disabled={status === 'sending'}
-            className="w-full py-4 px-6 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl transition-all transform active:scale-[0.98] shadow-lg shadow-emerald-900/20 disabled:opacity-50"
+            className="w-full py-4 px-6 bg-[#00f5a0] hover:bg-[#00d98f] text-[#0a0c14] font-extrabold rounded-xl transition-all transform active:scale-[0.98] shadow-lg shadow-emerald-500/20 disabled:opacity-50"
           >
             {status === 'sending' ? 'Sending...' : 'Send Message'}
           </button>
           
-          <div className="h-6"> {/* Fixed height to prevent layout shift */}
+          <div className="h-6"> 
             {status === 'success' && (
               <p className="text-emerald-400 text-center text-sm font-medium animate-pulse mt-4">
                 Message sent! I'll get back to you soon.
