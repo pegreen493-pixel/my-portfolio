@@ -43,11 +43,11 @@ export default function Contact() {
               Your Email
             </label>
             <input 
-              type="email" 
-              name="from_email" 
-              placeholder="name@example.com"
-              required 
-              className="w-full p-4 rounded-xl bg-[#161b22] border border-white/5 text-white placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-600/50 focus:border-blue-500 transition-all shadow-inner"
+                type="email" 
+                name="from_email" 
+                placeholder="name@example.com"
+                required 
+                className="w-full p-4 rounded-xl bg-[#161b22] border border-white/10 text-white placeholder:text-gray-500 outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 transition-all shadow-inner"
             />
           </div>
           
@@ -56,25 +56,25 @@ export default function Contact() {
               Message
             </label>
             <textarea 
-              name="message" 
-              placeholder="What's on your mind?"
-              required 
-              className="w-full p-4 h-40 rounded-xl bg-[#161b22] border border-white/5 text-white placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-600/50 focus:border-blue-500 transition-all resize-none shadow-inner"
+                name="message" 
+                placeholder="What's on your mind?"
+                required 
+                className="w-full p-4 h-40 rounded-xl bg-[#161b22] border border-white/10 text-white placeholder:text-gray-500 outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500 transition-all resize-none shadow-inner"
             />
           </div>
 
-          <button 
+          <button   
             type="submit" 
             disabled={status === 'sending'}
-            className="w-full py-4 px-6 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all transform active:scale-[0.98] shadow-lg shadow-blue-600/20 disabled:opacity-50"
+            className="w-full py-4 px-6 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl transition-all transform active:scale-[0.98] shadow-lg shadow-emerald-900/20 disabled:opacity-50"
           >
             {status === 'sending' ? 'Sending...' : 'Send Message'}
           </button>
           
           <div className="h-6"> {/* Fixed height to prevent layout shift */}
             {status === 'success' && (
-              <p className="text-emerald-400 text-center text-sm font-medium animate-fade-in">
-                ✨ Message sent! I'll get back to you soon.
+              <p className="text-emerald-400 text-center text-sm font-medium animate-pulse mt-4">
+                Message sent! I'll get back to you soon.
               </p>
             )}
             {status === 'error' && (
